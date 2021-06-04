@@ -1,6 +1,8 @@
 # Linux
 
 > Run man command first.
+>
+> -- <cite>a friend of mine</cite>
 
 ### find 
 
@@ -40,3 +42,13 @@ This looks a bit tricky, but would be useful in IT operations. You can clean out
 Also it's a good idea to set up a cron job to clean the logs.
 
 Watch out! Please note this kind of file operation can never be undone. Some Linux commands entail some risks.
+
+### wc
+
+Counts up bytes, words and newlines. 
+
+```
+cat hoge.txt | wc -l
+```
+
+This counts the number of lines of hoge.txt.
