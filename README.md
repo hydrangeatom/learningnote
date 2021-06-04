@@ -8,3 +8,4 @@ Especially when you try the sample codes attached, please make sure what you are
 ## Table of Contents
 
 - [Linux](Linux.md)
+- [Chemistry](Chemistry.md)
