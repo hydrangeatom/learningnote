@@ -34,9 +34,9 @@ find . -type f -name '*.log' -mtime +3 -exec rm {} \;
 ```
 
 Search for .log files that are older than 3 days and remove them.
-`-mtime` sepcifies a condition on file timestamps. And `-exec` specifies the shell command to be executed.
+`-mtime` specifies a condition on file timestamps. And `-exec` specifies the shell command to be executed.
 
 This looks a bit tricky, but would be useful in IT operations. You can clean out-of-date log files on a server.
 Also it's a good idea to set up a cron job to clean the logs.
 
-Watch out! Please note this kind of file opreration can never be undone. Some Linux commands have some risks.
+Watch out! Please note this kind of file operation can never be undone. Some Linux commands entail some risks.
