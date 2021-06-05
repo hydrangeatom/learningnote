@@ -48,7 +48,25 @@ Watch out! Please note this kind of file operation can never be undone. Some Lin
 Counts up bytes, words and newlines. 
 
 ```
-cat hoge.txt | wc -l
+cat foobar.txt | wc -l
 ```
 
 This counts the number of lines of hoge.txt.
+
+
+### tar
+
+Though I've been using Linux OS for many years, I still google how to use tar. 
+
+
+|extention   |compress                 |decompress           |note                                                   |
+|------------|-----------------------  |---------------------|-------------------------------------------------------|
+|`.tar`      |tar cvf foo.tar foo      |tar xvf foo.tar      |tar contains uncompressed bytes of the archived files. |
+|`.tar.bz2`  |tar cvjf foo.tar.bz2 foo |tar xvjf foo.tar.bz2 |bzip2                                                  |
+|`.tar.gz`   |tar cvzf foo.tar.gz foo  |tar xvzf foo.tar.gz  |gzip                                                   |
+
+Each option expalined:
+- c: Create an archive
+- v: show the progress Verbosely
+- f: File name of the archive
+- x: eXtract files from an archive
