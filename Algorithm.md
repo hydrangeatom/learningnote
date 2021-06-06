@@ -1,4 +1,4 @@
-# Algorithm
+# Data Structures and Algorithms
 
 ### Bogo Sort
 

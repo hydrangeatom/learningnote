@@ -51,7 +51,7 @@ Counts up bytes, words and newlines.
 cat foobar.txt | wc -l
 ```
 
-This counts the number of lines of hoge.txt.
+This counts the number of lines of foobar.txt.
 
 
 ### tar
