@@ -20,6 +20,20 @@ Predefined character class:
 - `\S`: matches any non-whitespaces.
 - `\w`: matches any alphanumerics characters. equivalent to `[0-9a-zA-Z_]`.
 
+Let's move on to using regex in Python.  Unlike grep and Perl, you need to compile the pattern string before searching for the matches with regex. `re.compile` method compiles a given pattern into a regular expression object, which has some matching methods such as `match`, `search`, and `findall`. These three methods may look similar to one another, but they behave fully differently.
+
+- `search`: It looks for the location that matches the given pattern from the beginning, and it returns the corresponding match object once it finds a match. If it finds nothing, None object will be returned.
+- `match`: Only if some characters at the beginning of the string match the given pattern, it returns the corresponding match object. 
+
+```python
+>>> import re
+>>> p = re.compile(r'[a-z]+[0-9]+')
+>>> print(p.search('123abc456'))
+<re.Match object; span=(3, 9), match='abc456'>
+>>> print(p.match('123abc456'))
+None
+```
+
 See also: 
 - [re - Regular Expression operations](https://docs.python.org/3/library/re.html)
 - [Regular Expression HOWTO](https://docs.python.org/3/howto/regex.html)
