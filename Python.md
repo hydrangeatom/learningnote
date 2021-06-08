@@ -34,6 +34,28 @@ Let's move on to using regex in Python.  Unlike grep and Perl, you need to compi
 None
 ```
 
+To obtain a specific part of the matching string, you can use the `group` method. You can extract matching subgroups, which are defined with parentheses. For example, `r'(\d+)-(\w+)'` has two subgroups: `(\d+)` and `(\w)`. The matching subgroups can be referred to by calling `m.group(1)` and `m.group(2)`, respectively.
+
+```python
+>>> p = re.compile(r'(\d+)-(\w+)')
+>>> m = p.match('000-abc123')
+>>> m.group(1)
+'000'
+>>> m.group(2)
+'abc123'
+```
+
+Also, Python has a more convenient and intuitive way to extract subgroups. The `(?P<name>...)` syntax provides you with named subgroups. It means you can access the subgroups with names instead of indexes.
+
+```python
+>>> p = re.compile(r'(?P<number>\d+)-(?P<name>\w+)')
+>>> m = p.match('000-abc123')
+>>> m.group('number')
+'000'
+>>> m.group('name')
+'abc123'
+```
+
 See also: 
 - [re - Regular Expression operations](https://docs.python.org/3/library/re.html)
 - [Regular Expression HOWTO](https://docs.python.org/3/howto/regex.html)
