@@ -60,7 +60,7 @@ See also:
 - [re - Regular Expression operations](https://docs.python.org/3/library/re.html)
 - [Regular Expression HOWTO](https://docs.python.org/3/howto/regex.html)
 
-#### Matplotlib
+### Matplotlib
 
 [Matplolib](https://matplotlib.org/) may be the most common library for data visualization within the Python ecosystem. You can easily connect what you calculated using your own Python code with data visualization process. I'll show some examples and tips on visualizing data with matplotlib.
 
