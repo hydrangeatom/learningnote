@@ -59,3 +59,20 @@ Also, Python has a more convenient and intuitive way to extract subgroups. The `
 See also: 
 - [re - Regular Expression operations](https://docs.python.org/3/library/re.html)
 - [Regular Expression HOWTO](https://docs.python.org/3/howto/regex.html)
+
+#### Matplotlib
+
+[Matplolib](https://matplotlib.org/) may be the most common library for data visualization within the Python ecosystem. You can easily connect what you calculated using your own Python code with data visualization process. I'll show some examples and tips on visualizing data with matplotlib.
+
+The below code is the simplest usage of matplotlib. `matplotlib.pyplot` is an easy-to-use interface to Matplotlib. 
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0.,2.*np.pi)
+y = np.sin(x)
+
+plt.plot(x, y)
+plt.show()
+```
