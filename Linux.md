@@ -7,7 +7,7 @@
 ### find 
 
 The `find` command is used to locate files and directories. 
-Also you can run some specific commands for the find results.
+Also, you can run some specific commands for the find results.
 I will show some common examples one by one that should be helpful. 
 
 ```
@@ -15,37 +15,39 @@ find .
 ```
 
 This is the simplest usage of the command.
-You get all the files and directories under the currect direcotry. 
+You get all the files and directories under the current direcotry. 
 
 ```
 find . -type f
 ```
 
 You get all the files under the current directory. The directories are excluded from the results.
-`-type` specifies the type of the files to be located. To search for regular files, supply `-type f`. For directories, `type -d`.
+`-type` specifies the type of the files to be located.
+To search for regular files, supply `-type f`. For directories, `type -d`.
 
 ```
 find . -type f -name '*.png'
 ```
-You get all png files under the current directory. `-name` specifies the file name pattern.
+You get all png files under the current directory. `-name` specifies the filename pattern.
 To do a case-insensitive search, use `-iname` instead. 
-
 
 ```
 find . -type f -name '*.log' -mtime +3 -exec rm {} \;
 ```
 
-Search for .log files that are older than 3 days and remove them.
-`-mtime` specifies a condition on file timestamps. And `-exec` specifies the shell command to be executed.
+Search for .log files that are older than three days and remove them. 
+`-mtime` specifies the timestamps. And `-exec` specifies the shell command to be executed.
+To search for newer than three days, supply `-mtime -3` instead. 
+Also, to specify the timestamp in minutes, use `-mmin`.
 
-This looks a bit tricky, but would be useful in IT operations. You can clean out-of-date log files on a server.
-Also it's a good idea to set up a cron job to clean the logs.
+This looks a bit tricky but would be useful in IT operations. You can clean out-of-date log files on a server.
+Also, it's a good idea to set up a cron job to clean the logs regularly.
 
-Watch out! Please note this kind of file operation can never be undone. Some Linux commands entail some risks.
+Watch out! Please note this kind of file operation can never be undone. Some commands of Linux entail some risks.
 
 ### wc
 
-Counts up bytes, words and newlines. 
+Counts up bytes, words, and newlines. 
 
 ```
 cat foobar.txt | wc -l
@@ -58,7 +60,6 @@ This counts the number of lines of foobar.txt.
 
 Though I've been using Linux OS for many years, I still google how to use tar. 
 
-
 |extention   |compress                 |decompress           |note                                                   |
 |------------|-----------------------  |---------------------|-------------------------------------------------------|
 |`.tar`      |tar cvf foo.tar foo      |tar xvf foo.tar      |tar contains uncompressed bytes of the archived files. |
@@ -68,5 +69,5 @@ Though I've been using Linux OS for many years, I still google how to use tar.
 Each option expalined:
 - c: Create an archive
 - v: show the progress Verbosely
-- f: File name of the archive
+- f: Filename of the archive
 - x: eXtract files from an archive
